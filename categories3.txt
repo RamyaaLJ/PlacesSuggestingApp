@@ -1,0 +1,511 @@
+<!DOCTYsai html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Categories</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Osain+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' tysai='text/css'>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better exsairience this site.</p>
+        <![endif]-->
+
+            <header>
+                <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    <a href="#">Home</a>
+                                    <a href="#">My account</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="cart-info">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    (<a href="#">5 items</a>) in your cart (<a href="#">$45.80</a>)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#"><img src="images/logo.png" title="Grill Template" alt="Grill Website Template" ></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html">About</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="contact-us.html">Contact</a></li>
+										<li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form">
+                                        <input id="search" tysai="text" />
+                                        <input tysai="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+
+            <div id="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Delicious Meals</h1>
+                            <p>saiople who love to eat are always the best saiople!Delight in eating, joy in living!
+                            <br><br>Good food is the foundation of genuine happiness!</p>
+                 
+                        </div>
+                      <img src="images/slide1.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Enriching Ambience</h1>
+                            <p>Journey into an Ambience of Delightful Surprises!Journey into an Ambience of Delightful Surprises!
+                            <br><br>Cherish Moments in this Captivating Ambience!</p>
+              
+                        </div>
+                      <img src="images/slide2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Healthy Drinks</h1>
+                            <p>Quench your thirst with nature's goodness!Discover the magic of drinks that heal and energize!
+                            <br><br>Healthy drinks, happy body, joyful soul!</p>
+                            
+                        </div>
+                      <img src="images/slide3.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div id="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Sai Baba Colony Cafes and Restraunts</h2>
+                                <img src="images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai1.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Cafe Coffee Day</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Caf%C3%A9+Coffee+Day/@11.0023018,76.9823966,15z/data=!4m6!3m5!1s0x3ba859b9eda97f1f:0xaf46a3863b6651bf!8m2!3d11.0023018!4d76.9823966!16s%2Fg%2F1thcl66n?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span class="location-icon">
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai1.jpg',
+                            name: 'Cafe Coffee Day',
+                            location: 'Bus Stop, # 14, Race Course Rd, near Thomas Park, Thomas Park, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Bus Stop, # 14, Race Course Rd, near Thomas Park, Thomas Park, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai2.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Bird On Tree Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Bird+on+Tree/@11.0089305,76.9838946,15z/data=!4m6!3m5!1s0x3ba858de0560c9cf:0x2dcfed076a26f120!8m2!3d11.0089305!4d76.9838946!16s%2Fg%2F1pw3xwtzt?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+											
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai2.jpg',
+                            name: 'Bird On Tree Cafe',
+                            location: '28, Kamaraj Rd, Opposite Circuit House, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>28, Kamaraj Rd, Opposite Circuit House, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai3.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Valarmathi Hotel</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Valarmathi+Mess/@11.0017387,76.9760166,15z/data=!4m6!3m5!1s0x3ba8599eb550cf1d:0x27c9fcf5b1154552!8m2!3d11.0017387!4d76.9760166!16s%2Fg%2F11f1274y0l?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai3.jpg',
+                            name: 'Valarmathi Hotel',
+                            location: 'CSI Compound, 207/A, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>CSI Compound, 207/A, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai4.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">INDCHICOO RESTRAUNT</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//POPPYS+TOWER,+Race+Course+Rd,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@10.9986027,76.8959714,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba85991e7bdc693:0xc6f1e6479e4336f!2m2!1d76.9783733!2d10.9986138?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai4.jpg',
+                            name: 'Indchicoo Restaurant',
+                            location: 'POPPYS TOWER, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>POPPYS TOWER, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai5.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Red Door Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//30C,+Race+Course+Rd,+Opp+Collector's+Bungalow,+Mamarath+Thottom+Ganapathy,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@10.9988714,76.896449,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859bb9c2fd651:0xc656a4ef346a3d73!2m2!1d76.9788509!2d10.9988825?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai5.jpg',
+                            name: 'Red Door Cafe',
+                            location: '30C, Race Course Rd, Opp Collector's Bungalow, Mamarath Thottom Ganapathy, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>30C, Race Course Rd, Opp Collector's Bungalow, Mamarath Thottom Ganapathy, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai6.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Heavenly Knights</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps?opi=89978449&sca_esv=554056951&lqi=ChZyYWNlIGNvdXJzZSByZXN0YXVyYW50SKLnoO6vuICACFokEAIYABgBGAIiFnJhY2UgY291cnNlIHJlc3RhdXJhbnQqAggDkgEKcmVzdGF1cmFudJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSU1oxQXRNVUpuRUFFqgFOEAEqDiIKcmVzdGF1cmFudCgAMh4QASIasWcYKJxR-DCr04drPaYh9ye1xo6BSOzEO2IyGhACIhZyYWNlIGNvdXJzZSByZXN0YXVyYW50&phdesc=N1WNqLbRsVo&vet=12ahUKEwiV-7baxsWAAxXHZvUHHcAIAA0Q8UF6BAgFEGM..i&lei=7kTOZJXMFMfN1e8PwJGAaA&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KfXpM31BWag7MYsFuxHKZ5dr&daddr=2B/1,+NCC+Avenue,+Thomas+Park,+Race+Course,+Coimbatore,+Tamil+Nadu+641018" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai6.jpg',
+                            name: 'Heavenly Knights',
+                            location: '2B/1, NCC Avenue, Thomas Park, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>2B/1, NCC Avenue, Thomas Park, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai7.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Annalakshmi Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//3rd+Pazhamudir+Nilayam+Building,+41,+Government+Arts+College+Rd,+Coimbatore,+Tamil+Nadu+641018/@10.9992829,76.8889714,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859a438c851b3:0x95681384137f3b09!2m2!1d76.9713733!2d10.999294?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai7.jpg',
+                            name: 'Annalakshmi Restaurant',
+                            location: 'Annalakshmi Restaurant, 3rd Pazhamudir Nilayam Building, 41, Government Arts College Rd, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Annalakshmi Restaurant, 3rd Pazhamudir Nilayam Building, 41, Government Arts College Rd, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai8.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Courtallam Border Rahmath Kadai</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//74,+Race+Course+Rd,+Gopalapuram,+Coimbatore,+Tamil+Nadu+641018/@10.9997126,76.8908481,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859a4efe47469:0x59c3a0154d70feee!2m2!1d76.97325!2d10.9997237?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai8.jpg',
+                            name: 'Courtallam Border Rahmath Kadai',
+                            location: 'Courtallam Border Rahmath Kadai, 74, Race Course Rd, Gopalapuram, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Courtallam Border Rahmath Kadai, 74, Race Course Rd, Gopalapuram, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/sai9.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Café Totaram</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//Beejay+center,+245%2F1,+Race+Course+Rd,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@11.0007101,76.8994166,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859b981e1dce5:0x47840c09cbbbefbd!2m2!1d76.9818185!2d11.0007212?entry=ttu" target="_blank">
+												<img src="images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai9.jpg',
+                            name: 'Cafe Totaram',
+                            location: 'Café Totaram, Beejay center, 245/1, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Café Totaram, Beejay center, 245/1, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="testimonails">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>What Customers Say</h2>
+                                <img src="images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="testimonails-slider">
+                              <ul class="slides">
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We had Veg pasta and it was awesome. The French fries were sairfect. Crisp, salted to the sairfect level. Lemon Iced tea was a treat for the summer heat. Excellent Ambience. If they take orders at the table it would add a feather to the cap.</p>
+                                        <h6> Cafe - <a href="#">Totaram</a></h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We visited the shop recently and had a great time. They do have a very compact arrangement inside and also outside the shop where can enjoy both indoor and outdoor exsairience. Felt like they provide comparatively less snacks than other CCD's, but I just liked the way staffs welcome the customers and their kind behaviour. Do visit this outlet for a small break in midst of busy life.</p>
+                                        <h6>Cafe - <a href="#">Cafe Coffe Day</a></h6>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Good food and food ambience available at this place. Had a good time. We tried different tysais of biryani here. Food was tasty and service was good.
+											Do visit here and get some good culinary. They have both indoor and outdoor sitting</p>
+                                        <h6>Cafe - <a href="#">Indchicoo</a></h6>
+                                    </div>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<footer>
+                <div class="container">
+                    <div class="top-footer">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="subscribe-form">
+                                    <span>Get in touch with us</span>
+                                    <form method="get" class="subscribeForm">
+                                        <input id="subscribe" tysai="text" />
+                                        <input tysai="submit" id="submitButton" />
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="social-bottom">
+                                    <span>Follow us:</span>
+                                    <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-rss"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-footer">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="about">
+                                    <h4 class="footer-title">About Grill</h4>
+                                    <p>Grill is free HTML5 template by <span class="blue">template</span><span class="green">mo</span> and it is a free responsive bootstrap layout that can be applied for any purpose.
+                                    <br><br>Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for photos used in this template. Nam commodo erat quis ligula placerat viverra.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shop-list">
+                                    <h4 class="footer-title">Shop Categories</h4>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>New Grill Menu</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Healthy Fresh Juices</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Spicy Delicious Meals</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Simple Italian Pizzas</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Pure Good Yogurts</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i>Ice-cream for kids</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="recent-posts">
+                                    <h4 class="footer-title">Recent posts</h4>
+                                    <div class="recent-post">
+                                        <div class="recent-post-thumb">
+                                            <img src="images/recent-post1.jpg" alt="">
+                                        </div>
+                                        <div class="recent-post-info">
+                                            <h6><a href="#">Delicious and Healthy Menus</a></h6>
+                                            <span>24/12/2084</span>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <div class="recent-post-thumb">
+                                            <img src="images/recent-post2.jpg" alt="">
+                                        </div>
+                                        <div class="recent-post-info">
+                                            <h6><a href="#">Simple and effective meals</a></h6>
+                                            <span>18/12/2084</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="more-info">
+                                    <h4 class="footer-title">More info</h4>
+                                    <p>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit.</p>
+                                    <ul>
+                                        <li><i class="fa fa-phone"></i>010-020-0340</li>
+                                        <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
+                                        <li><i class="fa fa-envelosai"></i><a href="#">info@company.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer">
+                        <p>
+                        	<span>Copyright © 2084 <a href="#">Your Company Name</a> 
+                            | Design: <a rel="nofollow" href="http://www.templatemo.com" target="_parent"><span class="blue">template</span><span class="green">mo</span></a></span>
+                        </p>
+                    </div>
+                    
+                </div>
+            </footer>
+
+    
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/jquery.gmap3.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

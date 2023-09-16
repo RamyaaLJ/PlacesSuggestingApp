@@ -1,0 +1,560 @@
+<!DOC html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Categories</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Osain+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' tysai='text/css'>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_misc.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonails-slider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+		<style>
+		.underline u {
+        text-decoration: underline;
+    }
+		.logout-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.logout-button img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
+  margin-right: 5px;
+}
+		</style>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+        <script src="/static/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better exsairience this site.</p>
+        <![endif]-->
+
+            <header>
+
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" class="hr-app-link"><img src="/static/images/logoimg.jpg" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="/homepage">Home</a></li>
+                                        <li><a href="/places">Places</a></li>
+                                        <li><a href="/search">Recommendation</a></li>
+                                        
+										<li><a href="/wishlist">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="/static/images/logout.jpg" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+
+            <div id="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Delicious Meals</h1>
+                            <p>saiople who love to eat are always the best saiople!Delight in eating, joy in living!
+                            <br><br>Good food is the foundation of genuine happiness!</p>
+                 
+                        </div>
+                      <img src="/static/images/slide1.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Enriching Ambience</h1>
+                            <p>Journey into an Ambience of Delightful Surprises!Journey into an Ambience of Delightful Surprises!
+                            <br><br>Cherish Moments in this Captivating Ambience!</p>
+              
+                        </div>
+                      <img src="/static/images/slide2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Healthy Drinks</h1>
+                            <p>Quench your thirst with nature's goodness!Discover the magic of drinks that heal and energize!
+                            <br><br>Healthy drinks, happy body, joyful soul!</p>
+                            
+                        </div>
+                      <img src="/static/images/slide3.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div id="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Sai Baba Colony Cafes and Restraunts</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai1.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Barbeequeen Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/BARBEQUEEN+RESTAURANT(SAIBABA+COLONY)/@11.0231332,76.9153962,13z/data=!4m10!1m2!2m1!1ssaibaba+colony+restraunts!3m6!1s0x3ba859646b99cceb:0x2f10d15f366467a8!8m2!3d11.0231332!4d76.9504151!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSAQpyZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVF0TkV0eFUyZG5SUkFC4AEA!16s%2Fg%2F11r_w6rfs0?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span class="location-icon">
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/sai1.jpg',
+                            name: 'Barbeequeen Restaurant',
+                            location: '14, Alagesan Rd, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>14, Alagesan Rd, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai2.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Hangout Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Hangout/@11.0201835,76.9354952,16z/data=!4m10!1m2!2m1!1ssaibaba+colony+restraunts!3m6!1s0x3ba858ddc07eca3d:0xc4976d3fa0975803!8m2!3d11.0201835!4d76.9398726!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARNiYXJiZWN1ZV9yZXN0YXVyYW504AEA!16s%2Fg%2F11bx43bs5x?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+											
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai2.jpg',
+                            name: 'Hangout Cafe',
+                            location: '33, 34, Bharathi Park Rd, 7TH CROSS, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>33, 34, Bharathi Park Rd, 7TH CROSS, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai3.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Domino's Pizza</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Domino's+Pizza/@11.0260947,76.939438,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+restraunts!6e5!3m6!1s0x3ba859985a6587ed:0xde8018f6f874dae!8m2!3d11.0260947!4d76.9438154!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARBwaXp6YV9yZXN0YXVyYW504AEA!16s%2Fg%2F1tgf66n3?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai3.jpg',
+                            name: 'Dominos Pizza',
+                            location: 'Ground Floor, Bharthi Park Cross Road, 1,1A,1B,1C &2, NSR Rd, below Mega Mart, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Ground Floor, Bharthi Park Cross Road, 1,1A,1B,1C &2, NSR Rd, below Mega Mart, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai4.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Burger Ka Baap - BKB Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Burger+Ka+Baap+-+BKB+Cafe/@11.0258339,76.9419283,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+restraunts!6e5!3m6!1s0x3ba859c8eed7b4b7:0xb849c17a373bc748!8m2!3d11.0258339!4d76.9463057!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARRoYW1idXJnZXJfcmVzdGF1cmFudOABAA!16s%2Fg%2F11n5y53mhk?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai4.jpg',
+                            name: 'Burger Ka Baap - BKB Cafe',
+                            location: 'Sree Narayana Guru Rd, behind City Union Bank, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sree Narayana Guru Rd, behind City Union Bank, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai5.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Ninhao New Age Chinese Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Ninhao+New+Age+Chinese+Restaurant/@11.0255373,76.9321554,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+restraunts!6e5!3m6!1s0x3ba858c290239c21:0x89d2fb2d9a7f9324!8m2!3d11.0255373!4d76.9365328!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARJjaGluZXNlX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1tcyvw2d?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai5.jpg',
+                            name: 'Ninhao New Age Chinese Restaurant',
+                            location: '276B, NSR Rd, above Karur Vysya Bank, Janaki Nagar, Saibaba Colony, Coimbatore, Tamil Nadu 641025'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>276B, NSR Rd, above Karur Vysya Bank, Janaki Nagar, Saibaba Colony, Coimbatore, Tamil Nadu 641025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai7.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Eat Alley Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Eat+Alley+Cafe/@11.0216574,76.9343405,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+restraunts!6e5!3m6!1s0x3ba859b953752093:0xd75b7e83eaf28945!8m2!3d11.0216574!4d76.9387179!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARJpdGFsaWFuX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F11bw2_dwjb?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/sai7.jpg',
+                            name: 'Eat Alley Cafe',
+                            location: '38, Bharathi Park 8th Cross Rd, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>38, Bharathi Park 8th Cross Rd, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai6.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">THE LONDON SHAKES</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/THE+LONDON+SHAKES/@11.0247512,76.9351171,16z/data=!4m10!1m2!2m1!1ssaibaba+colony+cafe!3m6!1s0x3ba858c2c419c265:0x637f380060247dcc!8m2!3d11.0247512!4d76.9394945!15sChNzYWliYWJhIGNvbG9ueSBjYWZlWhUiE3NhaWJhYmEgY29sb255IGNhZmWSAQpyZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVIxYzB3eVQzTjNSUkFC4AEA!16s%2Fg%2F11hcvw9_jl?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/sai6.jpg',
+                            name: 'THE LONDON SHAKES',
+                            location: 'Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai8.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Mamka Biriyani</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Mamu+Biriyani/@11.0270958,76.942502,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+restraunts!6e5!3m6!1s0x3ba858e92b737a6b:0xc7e6b3f28ef89eb1!8m2!3d11.0270958!4d76.9468794!15sChlzYWliYWJhIGNvbG9ueSByZXN0cmF1bnRzWhsiGXNhaWJhYmEgY29sb255IHJlc3RyYXVudHOSARRmYXN0X2Zvb2RfcmVzdGF1cmFudOABAA!16s%2Fg%2F11dxqn7947?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/sai8.jpg',
+                            name: 'Mamka Biriyani',
+                            location: '2WGW+RQJ, Near xtro clothings, Saibaba Mission, Saibaba Colony, Coimbatore, Tamil Nadu 641038'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>2WGW+RQJ, Near xtro clothings, Saibaba Mission, Saibaba Colony, Coimbatore, Tamil Nadu 641038</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/sai9.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Brew Bakes Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Brew+Bakes+Cafe/@11.0246318,76.9416186,16z/data=!4m11!1m3!2m2!1ssaibaba+colony+cafe!6e5!3m6!1s0x3ba859ea570270a1:0x2979ae2e99650efb!8m2!3d11.0246318!4d76.945996!15sChNzYWliYWJhIGNvbG9ueSBjYWZlWhUiE3NhaWJhYmEgY29sb255IGNhZmWSAQRjYWZl4AEA!16s%2Fg%2F11fjs8z2l0?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/sai9.jpg',
+                            name: 'Brew Bakes Cafe',
+                            location: '191, Raja Annamalai Rd, Loom World, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>191, Raja Annamalai Rd, Loom World, Nesavaalar Colony, Saibaba Colony, Coimbatore, Tamil Nadu 641011</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="testimonails">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>What Customers Say</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="testimonails-slider">
+                              <ul class="slides">
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We had Veg pasta and it was awesome. The French fries were sairfect. Crisp, salted to the sairfect level. Lemon Iced tea was a treat for the summer heat. Excellent Ambience. If they take orders at the table it would add a feather to the cap.</p>
+                                        <h6> Cafe - <a href="#">Totaram</a></h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We visited the shop recently and had a great time. They do have a very compact arrangement inside and also outside the shop where can enjoy both indoor and outdoor exsairience. Felt like they provide comparatively less snacks than other CCD's, but I just liked the way staffs welcome the customers and their kind behaviour. Do visit this outlet for a small break in midst of busy life.</p>
+                                        <h6>Cafe - <a href="#">Cafe Coffe Day</a></h6>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Good food and food ambience available at this place. Had a good time. We tried different tysais of biryani here. Food was tasty and service was good.
+											Do visit here and get some good culinary. They have both indoor and outdoor sitting</p>
+                                        <h6>Cafe - <a href="#">Indchicoo</a></h6>
+                                    </div>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+				
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+
+    
+        <script src="/static/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/static/js/vendor/jquery.gmap3.min.js"></script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/main.js"></script>
+		<script>
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the search term entered in the input field
+        var searchTerm = document.getElementById("search").value;
+
+        // Convert the search term to a regular expression with 'g' flag for global search
+        var searchRegex = new RegExp(searchTerm, "gi");
+
+        // Get all spans with underline and remove the underline
+        var underlineSpans = document.querySelectorAll("span.underline");
+        underlineSpans.forEach(span => {
+            span.outerHTML = span.textContent; // Replace the span with its content (removing the span element)
+        });
+
+        // Get all text nodes in the HTML page
+        var allTextNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+        // Variable to store if the search term is found
+        var isTermFound = false;
+
+        // Loop through all text nodes and underline the matches and scroll to the first match
+        while (allTextNodes.nextNode()) {
+            var textNode = allTextNodes.currentNode;
+            var textContent = textNode.textContent;
+
+            // Check if the text content contains the search term
+            if (textContent.match(searchRegex)) {
+                isTermFound = true;
+
+                // Wrap the matched text in a span with an underline class
+                var spanNode = document.createElement("span");
+                spanNode.className = "underline";
+                spanNode.innerHTML = textContent.replace(searchRegex, match => {
+                    return `<u>${match}</u>`;
+                });
+
+                // Replace the original text node with the new underlined span
+                textNode.parentNode.replaceChild(spanNode, textNode);
+
+                // Scroll to the first occurrence of the search term
+                spanNode.scrollIntoView();
+                break;
+            }
+        }
+
+        // If the search term is not found, show an alert
+        if (!isTermFound) {
+            alert("Search term not found!");
+        }
+    }
+	function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = '/';
+  }
+
+}
+</script>
+    </body>
+</html>

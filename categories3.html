@@ -1,0 +1,560 @@
+<!DOCTYchit html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Categories</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Ochitn+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' tychit='text/css'>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_misc.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonails-slider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+		<style>
+		.underline u {
+        text-decoration: underline;
+    }
+		.logout-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.logout-button img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
+  margin-right: 5px;
+}
+		</style>
+		<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+        <script src="/static/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better exchitrience this site.</p>
+        <![endif]-->
+
+            <header>
+
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" class="hr-app-link"><img src="/static/images/logoimg.jpg" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="/homepage">Home</a></li>
+                                        <li><a href="/places">Places</a></li>
+                                        <li><a href="/search">Recommendation</a></li>
+                                        
+										<li><a href="/wishlist">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="/static/images/logout.jpg" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+
+            <div id="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Delicious Meals</h1>
+                            <p>chitople who love to eat are always the best chitople!Delight in eating, joy in living!
+                            <br><br>Good food is the foundation of genuine happiness!</p>
+                 
+                        </div>
+                      <img src="/static/images/slide1.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Enriching Ambience</h1>
+                            <p>Journey into an Ambience of Delightful Surprises!Journey into an Ambience of Delightful Surprises!
+                            <br><br>Cherish Moments in this Captivating Ambience!</p>
+              
+                        </div>
+                      <img src="/static/images/slide2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Healthy Drinks</h1>
+                            <p>Quench your thirst with nature's goodness!Discover the magic of drinks that heal and energize!
+                            <br><br>Healthy drinks, happy body, joyful soul!</p>
+                            
+                        </div>
+                      <img src="/static/images/slide3.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div id="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Chitra Cafes and Restraunts</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit1.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Cafe Coffee Day</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Caf%C3%A9+Coffee+Day/@11.0023018,76.9823966,15z/data=!4m6!3m5!1s0x3ba859b9eda97f1f:0xaf46a3863b6651bf!8m2!3d11.0023018!4d76.9823966!16s%2Fg%2F1thcl66n?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span class="location-icon">
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit1.jpg',
+                            name: 'Cafe Coffee Day',
+                            location: 'Bus Stop, # 14, Race Course Rd, near Thomas Park, Thomas Park, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Bus Stop, # 14, Race Course Rd, near Thomas Park, Thomas Park, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit2.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Bird On Tree Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Bird+on+Tree/@11.0089305,76.9838946,15z/data=!4m6!3m5!1s0x3ba858de0560c9cf:0x2dcfed076a26f120!8m2!3d11.0089305!4d76.9838946!16s%2Fg%2F1pw3xwtzt?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+											
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit2.jpg',
+                            name: 'Bird On Tree Cafe',
+                            location: '28, Kamaraj Rd, Opposite Circuit House, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>28, Kamaraj Rd, Opposite Circuit House, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit3.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Valarmathi Hotel</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Valarmathi+Mess/@11.0017387,76.9760166,15z/data=!4m6!3m5!1s0x3ba8599eb550cf1d:0x27c9fcf5b1154552!8m2!3d11.0017387!4d76.9760166!16s%2Fg%2F11f1274y0l?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/chit3.jpg',
+                            name: 'Valarmathi Hotel',
+                            location: 'CSI Compound, 207/A, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>CSI Compound, 207/A, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit4.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">INDCHICOO RESTRAUNT</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//POPPYS+TOWER,+Race+Course+Rd,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@10.9986027,76.8959714,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba85991e7bdc693:0xc6f1e6479e4336f!2m2!1d76.9783733!2d10.9986138?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit4.jpg',
+                            name: 'Indchicoo Restaurant',
+                            location: 'POPPYS TOWER, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>POPPYS TOWER, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit5.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Red Door Cafe</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//30C,+Race+Course+Rd,+Opp+Collector's+Bungalow,+Mamarath+Thottom+Ganapathy,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@10.9988714,76.896449,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859bb9c2fd651:0xc656a4ef346a3d73!2m2!1d76.9788509!2d10.9988825?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit5.jpg',
+                            name: 'Red Door Cafe',
+                            location: '30C, Race Course Rd, Opp Collectors Bungalow, Mamarath Thottom Ganapathy, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>30C, Race Course Rd, Opp Collector's Bungalow, Mamarath Thottom Ganapathy, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit6.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Heavenly Knights</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps?opi=89978449&sca_esv=554056951&lqi=ChZyYWNlIGNvdXJzZSByZXN0YXVyYW50SKLnoO6vuICACFokEAIYABgBGAIiFnJhY2UgY291cnNlIHJlc3RhdXJhbnQqAggDkgEKcmVzdGF1cmFudJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSU1oxQXRNVUpuRUFFqgFOEAEqDiIKcmVzdGF1cmFudCgAMh4QASIasWcYKJxR-DCr04drPaYh9ye1xo6BSOzEO2IyGhACIhZyYWNlIGNvdXJzZSByZXN0YXVyYW50&phdesc=N1WNqLbRsVo&vet=12ahUKEwiV-7baxsWAAxXHZvUHHcAIAA0Q8UF6BAgFEGM..i&lei=7kTOZJXMFMfN1e8PwJGAaA&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KfXpM31BWag7MYsFuxHKZ5dr&daddr=2B/1,+NCC+Avenue,+Thomas+Park,+Race+Course,+Coimbatore,+Tamil+Nadu+641018" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit6.jpg',
+                            name: 'Heavenly Knights',
+                            location: '2B/1, NCC Avenue, Thomas Park, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>2B/1, NCC Avenue, Thomas Park, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit7.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Annalakshmi Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//3rd+Pazhamudir+Nilayam+Building,+41,+Government+Arts+College+Rd,+Coimbatore,+Tamil+Nadu+641018/@10.9992829,76.8889714,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859a438c851b3:0x95681384137f3b09!2m2!1d76.9713733!2d10.999294?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit7.jpg',
+                            name: 'Annalakshmi Restaurant',
+                            location: 'Annalakshmi Restaurant, 3rd Pazhamudir Nilayam Building, 41, Government Arts College Rd, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Annalakshmi Restaurant, 3rd Pazhamudir Nilayam Building, 41, Government Arts College Rd, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit8.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Courtallam Border Rahmath Kadai</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//74,+Race+Course+Rd,+Gopalapuram,+Coimbatore,+Tamil+Nadu+641018/@10.9997126,76.8908481,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859a4efe47469:0x59c3a0154d70feee!2m2!1d76.97325!2d10.9997237?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit8.jpg',
+                            name: 'Courtallam Border Rahmath Kadai',
+                            location: 'Courtallam Border Rahmath Kadai, 74, Race Course Rd, Gopalapuram, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Courtallam Border Rahmath Kadai, 74, Race Course Rd, Gopalapuram, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/chit9.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Café Totaram</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir//Beejay+center,+245%2F1,+Race+Course+Rd,+Race+Course,+Coimbatore,+Tamil+Nadu+641018/@11.0007101,76.8994166,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba859b981e1dce5:0x47840c09cbbbefbd!2m2!1d76.9818185!2d11.0007212?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/chit9.jpg',
+                            name: 'Cafe Totaram',
+                            location: 'Café Totaram, Beejay center, 245/1, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Café Totaram, Beejay center, 245/1, Race Course Rd, Race Course, Coimbatore, Tamil Nadu 641018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="testimonails">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>What Customers Say</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="testimonails-slider">
+                              <ul class="slides">
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We had Veg pasta and it was awesome. The French fries were chitrfect. Crisp, salted to the chitrfect level. Lemon Iced tea was a treat for the summer heat. Excellent Ambience. If they take orders at the table it would add a feather to the cap.</p>
+                                        <h6> Cafe - <a href="#">Totaram</a></h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We visited the shop recently and had a great time. They do have a very compact arrangement inside and also outside the shop where can enjoy both indoor and outdoor exchitrience. Felt like they provide comparatively less snacks than other CCD's, but I just liked the way staffs welcome the customers and their kind behaviour. Do visit this outlet for a small break in midst of busy life.</p>
+                                        <h6>Cafe - <a href="#">Cafe Coffe Day</a></h6>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Good food and food ambience available at this place. Had a good time. We tried different tychits of biryani here. Food was tasty and service was good.
+											Do visit here and get some good culinary. They have both indoor and outdoor sitting</p>
+                                        <h6>Cafe - <a href="#">Indchicoo</a></h6>
+                                    </div>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+				
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+
+    
+        <script src="/static/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/static/js/vendor/jquery.gmap3.min.js"></script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/main.js"></script>
+		<script>
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the search term entered in the input field
+        var searchTerm = document.getElementById("search").value;
+
+        // Convert the search term to a regular expression with 'g' flag for global search
+        var searchRegex = new RegExp(searchTerm, "gi");
+
+        // Get all spans with underline and remove the underline
+        var underlineSpans = document.querySelectorAll("span.underline");
+        underlineSpans.forEach(span => {
+            span.outerHTML = span.textContent; // Replace the span with its content (removing the span element)
+        });
+
+        // Get all text nodes in the HTML page
+        var allTextNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+        // Variable to store if the search term is found
+        var isTermFound = false;
+
+        // Loop through all text nodes and underline the matches and scroll to the first match
+        while (allTextNodes.nextNode()) {
+            var textNode = allTextNodes.currentNode;
+            var textContent = textNode.textContent;
+
+            // Check if the text content contains the search term
+            if (textContent.match(searchRegex)) {
+                isTermFound = true;
+
+                // Wrap the matched text in a span with an underline class
+                var spanNode = document.createElement("span");
+                spanNode.className = "underline";
+                spanNode.innerHTML = textContent.replace(searchRegex, match => {
+                    return `<u>${match}</u>`;
+                });
+
+                // Replace the original text node with the new underlined span
+                textNode.parentNode.replaceChild(spanNode, textNode);
+
+                // Scroll to the first occurrence of the search term
+                spanNode.scrollIntoView();
+                break;
+            }
+        }
+
+        // If the search term is not found, show an alert
+        if (!isTermFound) {
+            alert("Search term not found!");
+        }
+    }
+	function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = '/';
+  }
+
+}
+</script>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wishlist</title>
+	 <style>
+        
+        /* Add CSS styles for the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+		th{
+			text-align: center;
+		}
+		.center-heading th,tr {
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+			text-align: center;
+        }
+
+        /* Additional styling for the "Clear Wishlist" button */
+        button {
+            margin-top: 10px;
+        }
+
+        /* Center the table with space on the right and left side */
+        #wishlist-container {
+            display: flex;
+            justify-content: center;
+            margin: 0 20px; /* Adjust the margin value as needed */
+        }
+		
+		.logout-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.logout-button img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
+  margin-right: 5px;
+}
+
+    </style>
+   
+    <!-- Add your CSS and other meta tags here if necessary -->
+    <link rel="stylesheet" href="wishlist.css">
+	<meta charset="utf-8">
+        <title>Categories</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+</head>
+<body>
+ <header>
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" ><img src="images/logoimg.jpg" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about-us.html">About</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="places.html">Places</a></li>
+										<li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="images/logout.jpg" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <!-- Add a container to display the wishlist items -->
+	<div>
+		<h1><center><strong>WISHLIST</strong></center></h1><br><br>
+	</div>
+    <div id="wishlist-container">
+        <!-- The content generated by JavaScript will be placed here -->
+    </div>
+		
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+    <!-- Include your JavaScript and other scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- JavaScript to display the wishlist on page load -->
+    <script>
+        // Call the function to display the wishlist on page load
+        displayWishlist();
+		function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = 'categories.html';
+  }
+
+}
+    </script>
+</body>
+</html>

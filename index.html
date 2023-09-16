@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recommendation - HR Places Suggestion</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <div class="form-header">
+                            <h1>HR Places Suggestion</h1>
+                        </div>
+                        <form id="searchForm">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <span class="form-label">City</span>
+                                        <select class="form-control" name="first_option" id="first_option">
+                                            {% for option in options %}
+                                                <option value="{{ option }}">{{ option }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Locality</span>
+                                        <select class="form-control" name="second_option" id="second_option">
+
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Restaurants</span>
+                                        <select class="form-control" name="third_option" id="third_option">
+
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn" type="submit">Find Similar Restaurants</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="result">
+        <!-- The table will be displayed here -->
+    </div>
+
+    <script>
+        var firstOption = null
+        document.getElementById("first_option").addEventListener("change", function () {
+            var selectedOption = this.value;
+            firstOption = selectedOption;
+
+            // Send an AJAX request to Flask to fetch options for the second select group
+            fetch("/get_locality", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ selectedOption: selectedOption }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Populate the options in the second select group based on the response
+                var secondOptionSelect = document.getElementById("second_option");
+                secondOptionSelect.innerHTML = "";
+                data.options.forEach(function (option) {
+                    var optionElement = document.createElement("option");
+                    optionElement.value = option;
+                    optionElement.textContent = option;
+                    secondOptionSelect.appendChild(optionElement);
+                });
+            })
+            .catch(error => console.error("Error fetching options: ", error));
+        });
+
+        document.getElementById("second_option").addEventListener("change", function () {
+            var selectedOption = this.value;
+
+            // Send an AJAX request to Flask to fetch options for the third select group
+            fetch("/get_restaurants", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ firstOption: firstOption, selectedOption: selectedOption }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Populate the options in the third select group based on the response
+                var thirdOptionSelect = document.getElementById("third_option");
+                thirdOptionSelect.innerHTML = "";
+                data.options.forEach(function (option) {
+                    var optionElement = document.createElement("option");
+                    optionElement.value = option;
+                    optionElement.textContent = option;
+                    thirdOptionSelect.appendChild(optionElement);
+                });
+            })
+            .catch(error => console.error("Error fetching options: ", error));
+        });
+       
+        document.getElementById("searchForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            var firstOption = document.getElementById("first_option").value;
+            var secondOption = document.getElementById("second_option").value;
+            var thirdOption = document.getElementById("third_option").value;
+
+            // Form validation: Ensure both options are selected before submitting
+            if (firstOption === "" || secondOption === "" || thirdOption === "") {
+                alert("Please select options from both groups.");
+                return;
+            }
+
+            // Create an object to hold the form data
+            var formData = {
+                firstOption: firstOption,
+                secondOption: secondOption,
+                thirdOption: thirdOption
+            };
+
+            // Convert the form data to a JSON string
+            var jsonData = JSON.stringify(formData);
+
+            // Send the form data to the Flask endpoint
+            fetch("/search", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: jsonData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from Flask
+                displayTable(data);
+            })
+            .catch(error => console.error("Error submitting form data: ", error));
+        });
+
+        function displayTable(data) {
+            // Update the result div with the table
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+            resultDiv.classList.add("section2");
+            
+            if (data && data.length > 0) {
+                var table = document.createElement("table");
+                table.border = "1";
+                table.innerHTML = `
+                    <tr>
+                        <th>S.No</th>
+                        <th>Restaurant Name</th>
+                        <th>Cuisine</th>
+                        <th>Rating</th>
+                        <th>Cosine Similarity Score</th>
+                    </tr>
+                `;
+
+                data.forEach((item, index) => {
+                    var row = table.insertRow();
+                    var s_noCell = row.insertCell(0);
+                    var restaurantNameCell = row.insertCell(1);
+                    var cuisines = row.insertCell(2);
+                    var ratingCell = row.insertCell(3);
+                    var cosineSimilarityScoreCell = row.insertCell(4);
+
+                    s_noCell.textContent = index + 1;
+                    restaurantNameCell.textContent = item.restaurant_name;
+                    cuisines.textContent = item.cuisines
+                    ratingCell.textContent = item.rating;
+                    cosineSimilarityScoreCell.textContent = item.cosine_similarity_score;
+                });
+
+                resultDiv.appendChild(table);
+            } else {
+                resultDiv.textContent = "No items found.";
+            }
+        }
+
+    </script>
+</body>
+</html>

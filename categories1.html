@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Categories</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_misc.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonails-slider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+		<style>
+		.underline u {
+        text-decoration: underline;
+    }
+		.logout-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.logout-button img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
+  margin-right: 5px;
+}
+		</style>
+		<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+            <header>
+
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" class="hr-app-link"><img src="/static/images/logoimg.jpg" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="/homepage">Home</a></li>
+                                        <li><a href="/places">Places</a></li>
+                                        <li><a href="/search">Recommendation</a></li>
+                                        
+										<li><a href="/wishlist">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="/static/images/logout.jpg" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+
+            <div id="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Delicious Meals</h1>
+                            <p>People who love to eat are always the best people!Delight in eating, joy in living!
+                            <br><br>Good food is the foundation of genuine happiness!</p>
+                 
+                        </div>
+                      <img src="/static/images/slide1.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Enriching Ambience</h1>
+                            <p>Journey into an Ambience of Delightful Surprises!Journey into an Ambience of Delightful Surprises!
+                            <br><br>Cherish Moments in this Captivating Ambience!</p>
+              
+                        </div>
+                      <img src="/static/images/slide2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Healthy Drinks</h1>
+                            <p>Quench your thirst with nature's goodness!Discover the magic of drinks that heal and energize!
+                            <br><br>Healthy drinks, happy body, joyful soul!</p>
+                            
+                        </div>
+                      <img src="/static/images/slide3.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div id="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Peelamedu Cafes and Restraunts</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe1.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Chocko Choza</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/dir/11.0273656,77.0219014/chocko+choza+peelamedu/@11.0249638,76.9897782,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3ba857878455aa13:0xe223ac080281f7d7!2m2!1d76.9971717!2d11.0219287?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span class="location-icon">
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe1.jpg',
+                            name: 'Chocko Choza',
+                            location: '4-479, Avinashi Road KR Puram, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>4-479, Avinashi Road KR Puram, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe2.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Haribhavanam Hotel </a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Haribhavanam+Hotel+-+Peelamedu/@11.0224258,76.995797,15z/data=!4m6!3m5!1s0x3ba858310942b5e7:0x410d3771d60cf3a2!8m2!3d11.0224258!4d76.995797!16s%2Fg%2F11g_mg4x4?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+											
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe2.jpg',
+                            name: 'Haribhavanam Hotel',
+                            location: '2, Bharathi Colony Rd, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>2, Bharathi Colony Rd, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe3.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Zucca Pizza Hut</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Luvah+Pizza/@11.0251875,77.0068125,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba85831be25535d:0x713f2ffde8ada2f!8m2!3d11.0251875!4d77.0068125!16s%2Fg%2F11b5pjjp0f?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe3.jpg',
+                            name: 'Zucca Pizza Hut',
+                            location: 'Avinashi Road ( opp to Rajashree ford 22G4+3P5 GRD College, Road, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Avinashi Road ( opp to Rajashree ford 22G4+3P5 GRD College, Road, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe4.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Cream Stone</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Cream+Stone/@11.0224763,76.9983351,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba85831dd305279:0x128032950310f80!8m2!3d11.0224763!4d76.9983351!16s%2Fg%2F11bwkpx3x3?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe4.jpg',
+                            name: 'Cream Stone',
+                            location: '1335, Avinashi Rd, beside SMS Hotels, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>1335, Avinashi Rd, beside SMS Hotels, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe5.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Shree Anandhaas</a></h4>
+                                        <span class="location-icon">
+											<a href="google.com/maps/place/Shree+Anandhaas+%7C+Avinashi+Road/@11.040027,77.0405263,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba857c742c74e71:0x489df3cc77bc3a62!8m2!3d11.040027!4d77.0405263!16s%2Fg%2F11bbw_k_bj?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe5.jpg',
+                            name: 'Shree Anandhaas',
+                            location: '205-F, Avinashi Rd, opp. to KMCH, TNHB Colony, Madhusudhan Layout, Civil Aerodrome Post, Nehru Nagar West, Coimbatore, Tamil Nadu 641014'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>205-F, Avinashi Rd, opp. to KMCH, TNHB Colony, Madhusudhan Layout, Civil Aerodrome Post, Nehru Nagar West, Coimbatore, Tamil Nadu 641014</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe6.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Cascade Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/The+Cascade/@11.021295,76.9950906,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba858317b87844b:0x210daef01f81132a!8m2!3d11.021295!4d76.9950906!16s%2Fg%2F1tdb2q5z?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe6.jpg',
+                            name: 'Cascade Restaurant',
+                            location: 'B1&B2, 479, Avinashi - Coimbatore Rd, next to Suguna Kalyana Mandapam, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>B1&B2, 479, Avinashi - Coimbatore Rd, next to Suguna Kalyana Mandapam, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe7.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Ibaco Ice-Cream Shop</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/ibaco,+Peelamedu/@11.0245851,77.0063707,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8582e56dbbed9:0x282a94d05d42a4ea!8m2!3d11.0245851!4d77.0063707!16s%2Fg%2F124ss1hxp?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe7.jpg',
+                            name: 'Ibaco Ice-Cream Shop',
+                            location: '1392, Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>1392, Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe8.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">SMS Hotel</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/sms+hotels/@11.0228036,76.9985427,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8582e2754ac75:0xa7ad67679e567bbb!8m2!3d11.0228036!4d76.9985427!16s%2Fg%2F11b5pj9fg2?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: '/static/images/pe8.jpg',
+                            name: 'SMS Hotel',
+                            location: '1335, Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>1335, Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="/static/images/pe9.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Shree Aksshayam Restaurant</a></h4>
+                                        <span class="location-icon">
+											<a href="https://www.google.com/maps/place/Shree+Aksshayam/@11.0206302,76.9908446,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba859c0c764681f:0xec6440565eb6d8a4!8m2!3d11.0206302!4d76.9908446!16s%2Fg%2F11dfhzbjjh?entry=ttu" target="_blank">
+												<img src="/static/images/loc.png" alt="Location Icon" />
+											</a>
+										</span>
+										<span class="wishlist-icon">
+											<img src="/static/images/wish.png" alt="Wishlist Icon" onclick="addToWishlist({ 
+                            image: 'images/pe9.jpg',
+                            name: 'Shree Aksshayam Restaurant',
+                            location: '27 A, Nava India Rd, Peelamedu, Coimbatore, Tamil Nadu 641006'
+                        })" />
+										</span class="wishlist-icon">
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>27 A, Nava India Rd, Peelamedu, Coimbatore, Tamil Nadu 641006</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="testimonails">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>What Customers Say</h2>
+                                <img src="/static/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="testimonails-slider">
+                              <ul class="slides">
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We had Veg pasta and it was awesome. The French fries were perfect. Crisp, salted to the perfect level. Lemon Iced tea was a treat for the summer heat. Excellent Ambience. If they take orders at the table it would add a feather to the cap.</p>
+                                        <h6> Cafe - <a href="#">Totaram</a></h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>We visited the shop recently and had a great time. They do have a very compact arrangement inside and also outside the shop where can enjoy both indoor and outdoor experience. Felt like they provide comparatively less snacks than other CCD's, but I just liked the way staffs welcome the customers and their kind behaviour. Do visit this outlet for a small break in midst of busy life.</p>
+                                        <h6>Cafe - <a href="#">Cafe Coffe Day</a></h6>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Good food and food ambience available at this place. Had a good time. We tried different types of biryani here. Food was tasty and service was good.
+											Do visit here and get some good culinary. They have both indoor and outdoor sitting</p>
+                                        <h6>Cafe - <a href="#">Indchicoo</a></h6>
+                                    </div>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+				
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+
+    
+        <script src="/static/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/static/js/vendor/jquery.gmap3.min.js"></script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/main.js"></script>
+		<script>
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the search term entered in the input field
+        var searchTerm = document.getElementById("search").value;
+
+        // Convert the search term to a regular expression with 'g' flag for global search
+        var searchRegex = new RegExp(searchTerm, "gi");
+
+        // Get all spans with underline and remove the underline
+        var underlineSpans = document.querySelectorAll("span.underline");
+        underlineSpans.forEach(span => {
+            span.outerHTML = span.textContent; // Replace the span with its content (removing the span element)
+        });
+
+        // Get all text nodes in the HTML page
+        var allTextNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+        // Variable to store if the search term is found
+        var isTermFound = false;
+
+        // Loop through all text nodes and underline the matches and scroll to the first match
+        while (allTextNodes.nextNode()) {
+            var textNode = allTextNodes.currentNode;
+            var textContent = textNode.textContent;
+
+            // Check if the text content contains the search term
+            if (textContent.match(searchRegex)) {
+                isTermFound = true;
+
+                // Wrap the matched text in a span with an underline class
+                var spanNode = document.createElement("span");
+                spanNode.className = "underline";
+                spanNode.innerHTML = textContent.replace(searchRegex, match => {
+                    return `<u>${match}</u>`;
+                });
+
+                // Replace the original text node with the new underlined span
+                textNode.parentNode.replaceChild(spanNode, textNode);
+
+                // Scroll to the first occurrence of the search term
+                spanNode.scrollIntoView();
+                break;
+            }
+        }
+
+        // If the search term is not found, show an alert
+        if (!isTermFound) {
+            alert("Search term not found!");
+        }
+    }
+	function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = '/';
+  }
+
+}
+</script>
+    </body>
+</html>

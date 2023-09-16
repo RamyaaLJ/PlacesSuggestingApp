@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+        
+    <link href='http://fonts.googleapis.com/css?family=Orsn+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' tyrs='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_misc.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/testimonails-slider.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+	
+    <title>Menu</title>  
+	
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+	<style>
+		.underline u {
+        text-decoration: underline;
+		}
+		.logout-button {
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		.logout-button img {
+			width: 20px; 
+			height: 20px;
+			margin-right: 5px;
+		}
+		.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+		</style>
+  
+
+</head>
+
+<body>
+	<header>
+
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" class="hr-app-link"><img src="{{ url_for('static', filename='images/logoimg.jpg') }}" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="/homepage">Home</a></li>
+                                        <li><a href="/places">Places</a></li>
+                                        <li><a href="/search">Recommendation</a></li>
+                                        
+										<li><a href="/wishlist">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="{{ url_for('static', filename='images/logout.jpg') }}" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+	
+	<!-- Start All Pages -->
+	
+	<!-- End All Pages -->
+	
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Bird On Tree Menu</h2>
+						<p>Bird on a tree is one of Coimbatore's finest restaurants, with a lot to offer to satisfy all your cravings.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="special-menu text-center">
+						<div class="button-group filter-button-group">
+							<button class="active" data-filter="*">All</button>
+							<button data-filter=".drinks">Drinks</button>
+							<button data-filter=".lunch">Lunch</button>
+							<button data-filter=".dinner">Dinner</button>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="row special-list">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-01.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Margarita</h4>
+							<p>The favourite classic.Refreshing lime mixed with either mango,strawberry.</p>
+							<h5>Rs.125</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-02.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Watermelon Mojito</h4>
+							<p>A twist on the classic Mojito mixed with thirst quenching watermelon.</p>
+							<h5>Rs.85</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-03.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Mai Tai</h4>
+							<p>Orange,golden pineapple,apricot and almonds.Something out of this world.</p>
+							<h5>Rs.140</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-04.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Tandoori Chicken Burger</h4>
+							<p>A ground chicken burger with lots of tandoori spices, ginger, and green onion</p>
+							<h5> Rs.180</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-05.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Ghost Rogan Josh</h4>
+							<p>It is an Indian curry recipe is a delicacy with intense flavours.</p>
+							<h5>Rs.250</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-06.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Schezwan Hakka Fish</h4>
+							<p>is a popular Indo-Chinese condiment made with red chilies,garlic,peppers. </p>
+							<h5>Rs.230</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-07.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Browine with ice cream</h4>
+							<p>Itis made from brownies,hot chocolate sauce,sugar and vanilla ice cream.</p>
+							<h5>Rs.150</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-08.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Methi Malai Mushroom</h4>
+							<p>It is a rich, creamy and filling vegan dish that's full of flavor. </p>
+							<h5>Rs.280</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="{{ url_for('static', filename='images/img-09.jpg') }}" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Paneer and Mushroom Punjabi</h4>
+							<p>This is a super delicious creamy curry.</p>
+							<h5>Rs.320</h5>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Menu -->
+	
+	<div>
+		<center>
+		<a href="/rating">
+		<button class="button-74" role="button">Give Review</button>
+		</a>
+		</center>
+
+	</div>
+	
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+	<!-- ALL JS FILES -->
+	<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{{ url_for('static', filename='js/jquery.superslides.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/images-loded.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/isotope.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/baguetteBox.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/form-validator.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+	<script>
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the search term entered in the input field
+        var searchTerm = document.getElementById("search").value;
+
+        // Convert the search term to a regular expression with 'g' flag for global search
+        var searchRegex = new RegExp(searchTerm, "gi");
+
+        // Get all spans with underline and remove the underline
+        var underlineSpans = document.querySelectorAll("span.underline");
+        underlineSpans.forEach(span => {
+            span.outerHTML = span.textContent; // Replace the span with its content (removing the span element)
+        });
+
+        // Get all text nodes in the HTML page
+        var allTextNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+        // Variable to store if the search term is found
+        var isTermFound = false;
+
+        // Loop through all text nodes and underline the matches and scroll to the first match
+        while (allTextNodes.nextNode()) {
+            var textNode = allTextNodes.currentNode;
+            var textContent = textNode.textContent;
+
+            // Check if the text content contains the search term
+            if (textContent.match(searchRegex)) {
+                isTermFound = true;
+
+                // Wrap the matched text in a span with an underline class
+                var spanNode = document.createElement("span");
+                spanNode.className = "underline";
+                spanNode.innerHTML = textContent.replace(searchRegex, match => {
+                    return `<u>${match}</u>`;
+                });
+
+                // Replace the original text node with the new underlined span
+                textNode.parentNode.replaceChild(spanNode, textNode);
+
+                // Scroll to the first occurrence of the search term
+                spanNode.scrollIntoView();
+                break;
+            }
+        }
+
+        // If the search term is not found, show an alert
+        if (!isTermFound) {
+            alert("Search term not found!");
+        }
+    }
+	function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = '/';
+  }
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - HR Place Suggestion</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" />
+</head>
+<body>
+    <div class="signup-box">
+        <form id="myForm">
+            <h2>HR PLACE SUGGESTION</h2>
+            <h2>Sign Up</h2>
+            <div class="user-box">
+                <input type="text" name="name" id="name" required="">
+                <label>Full Name</label>
+            </div>
+            <div class="user-box">
+                <input type="email" name="email" id="email" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="password" required="">
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="cpassword" id="cpassword" required="">
+                <label>Confirm Password</label>
+            </div>
+            <button class="a" type="submit">Submit</button>
+            <br>
+            <br>
+            <a href="/" style="color: white;">Already have an account?</a></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var cpassword = document.getElementById("cpassword").value;
+
+
+            // Form validation: Ensure all fields are filled before submitting
+            if (name === "" || email === "" || password === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+            console.log(password, cpassword)
+            // Check if passwords match
+            if (password !== cpassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Create a JSON object to hold the form data
+            var formData = {
+                name: name,
+                email: email,
+                password: password
+            };
+
+            // Send the form data as a JSON document to the "/register" endpoint in your Flask app
+            fetch("/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    // Redirect to the search page if login was successful
+                    window.location.href = "/search";
+                } else if (response.status === 400) {
+                    // Handle invalid password scenario if needed
+                    alert("Username already exists");
+                } else {
+                    // Handle other error scenarios if needed
+                    alert("server");
+                }
+            })
+            .catch(error => console.error("Error submitting form data: ", error));
+        });
+    </script>
+</body>
+</html>

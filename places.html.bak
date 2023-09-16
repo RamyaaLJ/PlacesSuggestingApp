@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Places</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+		
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/testimonails-slider.css">
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css1/bootstrap.min.css">    
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="css1/style.css">    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css1/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css1/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	.hr-app-link {
+		font-size: 22px; 
+	}
+	
+	.image-container {
+    position: relative;
+	overflow: hidden;
+	}
+
+
+.image-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color and opacity for the caption */
+    opacity: 0.9; /* Hide the caption by default */
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.image-container:hover .image-caption {
+    opacity: 0; /* Show the caption when hovering over the image */
+}
+
+.image-caption p {
+    color: white; /* Set the text color */
+    font-size: 30px; /* Set the font size */
+    padding: 10px; /* Add padding around the text */
+    text-align: center;
+	
+	margin:0;
+	padding:0;
+}
+ .underline u {
+        text-decoration: underline;
+    }
+	.logout-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.logout-button img {
+  width: 20px; /* Adjust the width and height as needed */
+  height: 20px;
+  margin-right: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+
+               <div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="main-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="logo">
+                                    <a href="#" class="hr-app-link"><img src="images/logoimg.jpg" title="HR Place Suggestion" alt="HR" ><strong>HR App</strong></a>
+                                </div>
+								
+                            </div>
+                            <div class="col-md-6">
+                                <div class="main-menu">
+                                    <ul>
+                                        <li><a href="homepage.html">Home</a></li>
+                                        <li><a href="places.html">Places</a></li>
+                                        <li><a href="Recommendation.html">Recommendation</a></li>
+                                        
+										<li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="search-box">  
+                                    <form name="search_form" method="get" class="search_form" onsubmit="performSearch(event)">
+                                        <input id="search" type="text" />
+                                        <input type="submit" id="search-button" />
+                                    </form>
+                                </div>
+                            </div>
+							<div class="col-md-1">
+								<div class="logo">
+									<button onclick="logout()" class="logout-button">
+										<img src="images/logout.jpg" alt="Logout">
+										Logout
+									</button>
+							
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div id="top-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="home-account">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+	
+	<!-- Start Gallery -->
+	<div class="gallery-box">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Places</h2>
+						<p>Elevating dining to an unforgettable experience!</p>
+					</div>
+				</div>
+			</div>
+			<div class="tz-gallery">
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/place2.jpg">
+							<img class="img-fluid" src="images/place2.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+							<a href="categories.html">
+								<p>Race Course</p>
+							</a>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/place3.jpg">
+							<img class="img-fluid" src="images/place3.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+							<a href="categories1.html">
+							<p>Peelamedu</p>
+							</a>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/gallery-img-03.jpg">
+							<img class="img-fluid" src="images/place4.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+						<a href="categories2.html">
+							<p>Sai Baba Colony</p>
+						</a>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/place5.jpg">
+							<img class="img-fluid" src="images/place5.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+						<a href="categories4.html">
+							<p>R S Puram</p>
+						</a>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/place3.jpg">
+							<img class="img-fluid" src="images/place3.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+						<a href="categories3.html">
+							<p>Chitra</p>
+						</a>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="image-container">
+						<a class="lightbox" href="images/place7.jpg">
+							<img class="img-fluid" src="images/place7.jpg" alt="Gallery Images">
+						</a>
+						<div class="image-caption">
+						<a href="categories6.html">
+							<p>Gandhipuram</p>
+						</a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Gallery -->
+	
+	
+	
+	
+	
+	<!-- Start Footer -->
+	<footer class="footer-area bg-f">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3>About Us</h3>
+					<p>Welcome to HR Place Suggesting Application - your ultimate destination discovery app. Unearth hidden gems, popular spots, and everything in between. Simplifying your travel planning one place at a time.</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Explore places</h3>
+					<p>Discover the hidden gems of your hometown with Explore Local! Uncover charming cafes, historic landmarks, and secret spots. Experience your town like never before, from the eyes of a traveler. Embark on a journey of exploration in your very own backyard!</p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Contact information</h3>
+					
+					<p class="lead"><a href="#">+91 9876543210</a></p>
+					<p><a href="#"> hrplacesuggestingapp@gmail.com</a></p>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<h3>Social Media</h3>
+					<ul class="list-inline f-social">
+						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</footer>
+	<!-- End Footer -->
+	
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+	<script>
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the search term entered in the input field
+        var searchTerm = document.getElementById("search").value;
+
+        // Convert the search term to a regular expression with 'g' flag for global search
+        var searchRegex = new RegExp(searchTerm, "gi");
+
+        // Get all spans with underline and remove the underline
+        var underlineSpans = document.querySelectorAll("span.underline");
+        underlineSpans.forEach(span => {
+            span.outerHTML = span.textContent; // Replace the span with its content (removing the span element)
+        });
+
+        // Get all text nodes in the HTML page
+        var allTextNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+        // Variable to store if the search term is found
+        var isTermFound = false;
+
+        // Loop through all text nodes and underline the matches and scroll to the first match
+        while (allTextNodes.nextNode()) {
+            var textNode = allTextNodes.currentNode;
+            var textContent = textNode.textContent;
+
+            // Check if the text content contains the search term
+            if (textContent.match(searchRegex)) {
+                isTermFound = true;
+
+                // Wrap the matched text in a span with an underline class
+                var spanNode = document.createElement("span");
+                spanNode.className = "underline";
+                spanNode.innerHTML = textContent.replace(searchRegex, match => {
+                    return `<u>${match}</u>`;
+                });
+
+                // Replace the original text node with the new underlined span
+                textNode.parentNode.replaceChild(spanNode, textNode);
+
+                // Scroll to the first occurrence of the search term
+                spanNode.scrollIntoView();
+                break;
+            }
+        }
+
+        // If the search term is not found, show an alert
+        if (!isTermFound) {
+            alert("Search term not found!");
+        }
+    }
+	function logout() {
+  var confirmation = confirm("Are you sure you want to log out?");
+  if (confirmation) {
+    window.location.href = 'categories.html';
+  }
+
+}
+
+</script>
+
+	<!-- ALL JS FILES -->
+	<script src="jss/jquery-3.2.1.min.js"></script>
+	<script src="jss/popper.min.js"></script>
+	<script src="jss/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="jss/jquery.superslides.min.js"></script>
+	<script src="jss/images-loded.min.js"></script>
+	<script src="jss/isotope.min.js"></script>
+	<script src="jss/baguetteBox.min.js"></script>
+	<script src="jss/form-validator.min.js"></script>
+    <script src="jss/contact-form-script.js"></script>
+    <script src="jss/custom.js"></script>
+</body>
+</html>

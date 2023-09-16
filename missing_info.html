@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Missing Place - HR Place Suggestion</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" />
+</head>
+<body>
+    <div class="signup-box">
+        <form id="myForm">
+            <h2>HR PLACE SUGGESTION</h2>
+            <h2>Add a Missing Place</h2>
+            <div class="user-box">
+                <input type="text" name="name" id="name" required="">
+                <label>Shop Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="area" id="area" required="">
+                <label>Area</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="city" id="city" required="">
+                <label>City</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="gmaps_link" id="gmaps_link" required="">
+                <label>Google Maps Link</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="contact" id="contact" required="">
+                <label>Contact</label>
+            </div>
+            <button class="a" type="submit">Submit</button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            var name = document.getElementById("name").value;
+            var area = document.getElementById("area").value;
+            var city = document.getElementById("city").value;
+            var gmaps_link = document.getElementById("gmaps_link").value;
+            var contact = document.getElementById("contact").value;
+
+
+
+            // Form validation: Ensure all fields are filled before submitting
+            if (name === "" || area === "" || city === "" || gmaps_link === "" || contact === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Create a JSON object to hold the form data
+            var formData = {
+                name: name,
+                area: area,
+                city: city,
+                gmaps_link: gmaps_link,
+                contact: contact
+            };
+
+            // Send the form data as a JSON document to the "/register" endpoint in your Flask app
+            fetch("/missing_info", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.status === 201) {
+                    // Redirect to the search page if login was successful
+                    alert("Updated missing place")
+                    window.location.href = "/search";
+                } 
+            })
+            .catch(error => console.error("Error submitting form data: ", error));
+        });
+    </script>
+
+</body>
+</html>

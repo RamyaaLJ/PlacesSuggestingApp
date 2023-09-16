@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HR Place Suggestion</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+</head>
+<body>
+    <div class="login-box">
+        <form id="myForm">
+        <h2>HR PLACE SUGGESTION</h2>
+        <h2>Login</h2>
+        <div class="user-box">
+            <input type="email" name="email" id="email" required="">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" id="password" required="">
+            <label>Password</label>
+        </div>
+        <button class="a" type="submit">Submit</button>
+        <br>
+        <br>
+        <a href="/register" style="color: white;">Don't have an account?</a></p>
+      </form>
+      </div>
+      <script>
+          document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            var email = "sanjay";
+            var password = document.getElementById("password").value;
+
+            // Form validation: Ensure both fields are filled before submitting
+            if (email === "" || password === "") {
+                alert("Please fill in both fields.");
+                return;
+            }
+
+            // Create an object to hold the form data
+            var formData = {
+                email: email,
+                password: password,
+            };
+
+            // Convert the form data to a JSON string
+            var jsonData = JSON.stringify(formData);
+
+            // Send the form data to the "/login" endpoint in your Flask app
+            fetch("/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: jsonData,
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    // Redirect to the search page if login was successful
+                    window.location.href = "/homepage";
+                } else if (response.status === 401) {
+                    // Handle invalid password scenario if needed
+                    alert("Invalid password");
+                } else {
+                    // Handle other error scenarios if needed
+                    alert("User not found!");
+                }
+            })
+            .catch(error => console.error("Error submitting form data: ", error));
+        });
+      </script>
+
+</body>
+</html>
